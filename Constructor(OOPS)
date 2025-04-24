@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+	private:
+		string name,company;
+		int id, gross_salary, taxed_salary;
+	public:
+		Employee()
+		{
+			name= "xyz";
+			company= "xyz";
+			id=1;
+			gross_salary=1;
+			taxed_salary=1;
+		}
+		
+	void set_value(string n,int i,string c,int gs,int ts)
+	{
+		name= n;
+		id= i;
+		company=c;
+		gross_salary= gs;
+		taxed_salary= ts;
+	}
+	int get_data()
+	{
+		cout<<"\nName: "<<name;
+		cout<<"\nID: "<<id;
+		cout<<"\nCompany: "<<company;
+		cout<<"\nGross Salary: "<<gross_salary;
+		cout<<"\nTaxed Salary: "<<taxed_salary;
+	}
+};
+
+
+int main(int argc, char** argv) 
+{
+	Employee obj1;
+	obj1.set_value("Rayyan",4324,"Rayyan Traders",100000,80000);
+	obj1.get_data();
+	
+	return 0;
+}
